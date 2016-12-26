@@ -1,0 +1,12 @@
+$space-large: 2rem;
+$title-color: #c00;
+
+.page-title-weather {
+  color: $title-color;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+}
+
+input[type=search] {
+  box-shadow: none;
+}
