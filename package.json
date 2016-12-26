@@ -31,7 +31,8 @@
     "uuid": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts build&&node server.js",
+    "start_dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test_karma": "karma start",
