@@ -16,23 +16,26 @@
     "redux-mock-store": "^1.2.1"
   },
   "dependencies": {
-    "react-scripts": "0.8.4",
     "axios": "^0.15.3",
     "firebase": "^3.6.4",
     "foundation-sites": "^6.2.4",
     "jquery": "^3.1.1",
     "moment": "^2.17.1",
     "node-sass": "^4.0.0",
+    "npm-git-install": "^0.2.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
+    "react-scripts": "0.8.4",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "uuid": "^3.0.1",
-    "react-router": "ReactTraining/react-router#553b56a"
+    "uuid": "^3.0.1"
   },
   "scripts": {
-    "start": "react-scripts build&&node server.js",
+    "preinstall": "npm run router_clone&&npm run router_build",
+    "router_clone": "git clone https://github.com/ReactTraining/react-router.git node_modules/react-router",
+    "router_build": "cd node_modules/react-router&&git checkout -b v4 553b56a&&npm install&&npm run build-lib",
+    "start": "npm run scss&&react-scripts build&&node server.js",
     "start_dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
