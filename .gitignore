@@ -8,11 +8,14 @@ coverage
 
 # production
 build
+src/appStyle.css
 
 # misc
 .DS_Store
 .env
 npm-debug.log
+*.log
+*.log.*
 
 #vim temp/backup files
 *~

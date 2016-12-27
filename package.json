@@ -32,7 +32,7 @@
     "uuid": "^3.0.1"
   },
   "scripts": {
-    "preinstall": "npm run router_clone&&npm run router_build",
+    "prepublish": "npm unlink react-router&&npm run router_clone&&npm run router_build",
     "router_clone": "git clone https://github.com/ReactTraining/react-router.git node_modules/react-router",
     "router_build": "cd node_modules/react-router&&git checkout -b v4 553b56a&&npm install&&npm run build-lib",
     "start": "npm run scss&&react-scripts build&&node server.js",
