@@ -1,4 +1,5 @@
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'test';
+require('dotenv').config({silent: true});
 var webpackConfig = require('./node_modules/react-scripts/config/webpack.config.dev.js');
 
 module.exports = function (config) {
@@ -8,7 +9,7 @@ module.exports = function (config) {
     frameworks: ['mocha'],
     files: [
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/foundation-sites/dist/foundation.min.js',
+      'node_modules/foundation-sites/dist/js/foundation.min.js',
       'src/tests/**/*.test.jsx'
     ],
     preprocessors: {
@@ -16,6 +17,7 @@ module.exports = function (config) {
     },
     reporters: ['mocha'],
     client: {
+      captureConsole: true,
       mocha: {
         timeout: '5000'
       }
