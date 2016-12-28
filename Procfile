@@ -1,1 +1,1 @@
-web: node run start_server
+web: npm run start_server
